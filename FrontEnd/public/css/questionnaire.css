@@ -1,0 +1,285 @@
+/*Modificaciones para pantalla SIGNIN*/
+.fondo{
+  max-width: 320px;  
+  background-image: url("../images/Fondo/Fondo_Inicio.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-success {
+  background-color: #548880;
+  border-color: #548880;
+  text-align: left;
+}
+.btn-success:hover, .btn-success:active{
+  background-color: #549080;
+  border-color: #549080;
+  text-align: left;
+}
+
+.btn-danger {
+  background-color: #80392C;
+  border-color: #80392C;
+  text-align: left;
+}
+
+.btn-danger:hover, .btn-danger:active {
+  background-color: #90392C;
+  border-color: #90392C;
+  text-align: left;
+}
+.main{
+  background-color: #F2F2F2;
+  font-family: 'Roboto', sans-serif;
+}
+/*Modificaciones para pantalla Action*/
+.prompt {  
+  padding-top: 15px;
+  padding-left: 10px; 
+  padding-right: 10px;
+  /*height: 422px;*/
+  background-color: #F2F2F2;    
+}
+
+.volver {
+  color: #B3B3B3;  
+  font-size: 18px;
+}
+.prompt_q {
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #4F4D59;  
+  font-size: 16px;
+  text-align: left;
+}
+.prompt_r {
+  padding: 10px;  
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: #000000;  
+  font-size: 16px;  
+  text-align: center;
+  background-color: #C6D7CE;
+  border-radius: 12px;
+}
+
+.prompt_botones {
+  padding-top: 130px;      
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.prompt_btn_B {  
+  width: 75px;  
+  height: 75px;  
+  /*float: right;*/
+  color: #80392C;
+  text-align: center;
+  font-weight: bold;
+}
+.prompt_btn_O {
+  width: 75px;
+  height: 75px; 
+  color: #548880;
+  text-align: center;
+  font-weight: bold;
+}
+.next {
+  width: 75px;
+  height: 75px;
+  float: right;
+  color: #548880;
+  text-align: center;
+  font-weight: bold;
+}
+.back {
+  width: 75px;
+  height: 75px; 
+  color: #80392C;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*Modificaciones para pantalla ROLES*/
+
+a.roles {
+  border: none;
+  width: 45%;
+}
+.galeria div{
+  width: 100px; 
+  height: 100px;
+}
+.bar_bottom_b{
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #FFFFFF;
+  background-color: #80392C;
+  height: 60px;
+}
+.bar_bottom_o{
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #FFFFFF;
+  background-color: #548880;
+  height: 60px;
+}
+
+.prompt_categoria {  
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #4F4D59;  
+  font-size: 16px;
+  text-align: center;  
+}
+
+.gray {
+  background-color: #E0DFD7;
+  border-radius: 10px;
+}
+
+.blanco {
+  color: white;
+}
+
+
+/*Radio Button*/
+.styled-radio input{      
+  border: 0px;  
+  height: 16px;
+}
+.styled-radio input + span{  
+visibility: hidden; /*temporarily hide the "YES" label*/
+  background: #6EB558;
+  /*adding some CSS3 eye-candy - optional*/
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4e813f), to(#6EB558));
+  border: 1px solid #4e813f;
+  border-bottom-color: #ccc;
+  border-top-color: #000;
+  text-shadow: 0px 1px 1px #4e813f;  
+}
+
+input[type="radio"] + span:after{
+  content: "Y"; /*if CSS are disbled span elements are not displayed*/
+}
+
+
+input[type="radio"]:checked + span{
+  visibility: visible; /*show the "YES" label only if the radio is checked*/
+}
+
+
+/*Select Option*/
+.styled-select {
+  margin-bottom: 5px;
+  margin-left: 10px;
+   width: 200px;
+   height: 34px;
+   overflow: hidden;
+   background: url("../images/botones/lupa-busqueda.png") no-repeat right #ddd;
+   border: 1px solid #ccc;
+   }
+
+.styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 30px;
+   -webkit-appearance: none;
+ }
+
+.styled-select select>option {
+  text-align: center;
+}
+.styled-select select:hover {    
+    /*background-color: #549080;*/
+ }
+.flecha_arriba{
+  border: none;
+  width: 19px;
+  height: 12px;
+  background: url("../images/botones/boton-flecha-arriba.png") no-repeat;
+}
+.centrar {
+  margin-top: 10px; 
+  text-align: center;    
+}
+
+
+/* ANIMATIONS
+============================================================================= */
+
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+@keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+    40%     { transform: rotateZ(17deg); }
+    60%     { transform: rotateZ(16deg); }
+    100%    { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+
+/* page specific animations ------------------------ */
+
+/* home -------------------------- */
+
+.page-summary-animation.ng-enter {
+  -webkit-transition: .10s all; /* Safari/Chrome */
+  -moz-transition: .10s linear all; /* Firefox */
+  -o-transition: .10s linear all; /* Opera */
+  transition: .10s linear all; /* IE10+ and Future Browsers */
+}
+
+/**
+ * Pre animation -> enter
+ */
+.page-summary-animation.ng-enter{
+  /* The animation preparation code */
+  opacity: 0;
+}
+
+/**
+ * Post animation -> enter
+ */
+.page-summary-animation.ng-enter.ng-enter-active { 
+  /* The animation code itself */
+  opacity: 1;
+}
+
