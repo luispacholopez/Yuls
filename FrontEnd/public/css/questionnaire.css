@@ -265,7 +265,7 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 
 /* home -------------------------- */
 
-.page-summary-animation.ng-enter {
+.page-summary-animation .ng-enter {
   -webkit-transition: .10s all; /* Safari/Chrome */
   -moz-transition: .10s linear all; /* Firefox */
   -o-transition: .10s linear all; /* Opera */
@@ -370,3 +370,35 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 .radio_b{
   padding-left: 0;
 }
+/*SOLUTIONS*/
+
+.box{
+  /*margin-top: px;  */
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #F2F2F2;
+}
+
+.box-title{  
+  color: #909CA6;
+}
+
+.box-img{  
+  border-radius: 20px;
+  width: 10px;
+  height: 10px;
+}
+
+.box-body{  
+  color: #000000;
+}
+
+.box-footer{  
+  padding-top: 5px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #D3D7D7; 
+  vertical-align: center;
+}
+
