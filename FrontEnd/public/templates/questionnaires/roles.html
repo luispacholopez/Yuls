@@ -7,6 +7,9 @@
       2. Ahora, cuéntanos un poco más sobre quién eres...
     </div> 
   </div> 
+  <div layout='row' layout-align="center center">
+    <md-progress-circular md-mode="indeterminate" ng-show="load"></md-progress-circular>
+  </div>  
   <div class="galeria">
     <a ng-click="toggleDescription($index)" ng-repeat="rol in roles" class="roles">
         <img class="slide" ng-src="%%ruta+rol.imagen%%" />

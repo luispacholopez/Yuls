@@ -231,6 +231,15 @@ visibility: hidden; /*temporarily hide the "YES" label*/
   text-align: center;    
 }
 
+.btn-buscar {  
+  text-align: center;
+  background-color: #548880;
+  border-radius: 5px;
+  width: 65px;
+  height: 30px;
+  padding: 7px;
+}
+
 
 /* ANIMATIONS
 ============================================================================= */
@@ -278,7 +287,7 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 
 /* home -------------------------- */
 
-.page-summary-animation .ng-enter {
+.page-summary .ng-enter {
   -webkit-transition: .10s all; /* Safari/Chrome */
   -moz-transition: .10s linear all; /* Firefox */
   -o-transition: .10s linear all; /* Opera */
@@ -288,7 +297,7 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 /**
  * Pre animation -> enter
  */
-.page-summary-animation.ng-enter{
+.page-summary .ng-enter{
   /* The animation preparation code */
   opacity: 0;
 }
@@ -296,7 +305,7 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 /**
  * Post animation -> enter
  */
-.page-summary-animation.ng-enter.ng-enter-active { 
+.page-summary .ng-enter.ng-enter-active { 
   /* The animation code itself */
   opacity: 1;
 }
