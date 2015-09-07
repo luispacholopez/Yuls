@@ -103,63 +103,6 @@
   font-weight: bold;
 }
 
-/*Modificaciones para pantalla ROLES*/
-.body{
-  height: 370px;
-  background-color: #F2F2F2;  
-}
-.header{
-  padding-left: 10px;
-  padding-top: 15px;
-}
-a.roles {
-  border: none;
-  width: 45%;
-}
-.galeria {
-  background-color: #F2F2F2; 
-}
-.galeria div{
-  padding-top: 5px;
-  width: 95px; 
-  height: 95px;
-  margin: 5px auto
-}
-.bar_bottom_b{
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #FFFFFF;
-  background-color: #80392C;
-  height: 60px;
-}
-.bar_bottom_o{
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #FFFFFF;
-  background-color: #548880;
-  height: 60px;
-}
-
-.prompt_categoria {  
-  padding-left: 30px;
-  padding-right: 30px;
-  color: #4F4D59;  
-  font-size: 16px;
-  text-align: center;  
-}
-
-.gray {
-  background-color: #E0DFD7;
-  border-radius: 10px;
-}
-
-.blanco {
-  color: white;
-}
-
-
 /*Radio Button*/
 
 .styled-radio input{      
@@ -392,18 +335,26 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 .radio_b{
   padding-left: 0;
 }
-/*SOLUTIONS*/
 
+/*Solutions*/
+.backgr{
+  background-color: white;
+}
 .box{
   /*margin-top: px;  */
   text-align: center;
-  border-style: solid;
+  border-style: none;
   border-width: 1px;
-  background-color: #F2F2F2;
+  background-color: #F1F1F1;
+  padding: 1% 1% 1% 1%;
+  margin: 2% 2% 2% 2%;
 }
 
 .box-title{  
   color: #909CA6;
+  padding-left: 10px;
+  font-size: 15px;
+  text-align: left;
 }
 
 .box-img{  
@@ -414,15 +365,35 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 
 .box-body{  
   color: #000000;
+  padding: 2% 7% 0 7%;
+  text-align: justify;
 }
 
 .box-footer{  
-  padding-top: 5px;
+  color: #909CA6;
   height: 30px;
   cursor: pointer;
-  background-color: #D3D7D7; 
+  background-color: #F1F1F1; 
   vertical-align: center;
+  padding-top: 2%; 
+  padding-left: 7%;
+  text-align: justify;
 }
+.solut_foot{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  padding: 1% 2% 1% 2%;
+  height: 60px;
+}
+.solut-button{
+  background-color: #548880;
+  border-radius: 10px;
+  margin: 0% 30% 0% 30%;
+  height: 50px;
+}
+
 
 /*Modificaciones para pantalla Action*/
 .serv_body{
@@ -483,4 +454,60 @@ visibility: hidden; /*temporarily hide the "YES" label*/
   color:#58595B; 
   font-size: 9.6pt;
   height: 22px;
+}
+
+/*Modificaciones para pantalla ROLES*/
+.body{
+  height: 370px;
+  background-color: #F2F2F2;  
+}
+.header{
+  padding-left: 10px;
+  padding-top: 15px;
+}
+a.roles {
+  border: none;
+  width: 45%;
+}
+.galeria {
+  background-color: #F2F2F2; 
+}
+.galeria div{
+  padding-top: 5px;
+  width: 95px; 
+  height: 95px;
+  margin: 5px auto
+}
+.bar_bottom_b{
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #FFFFFF;
+  background-color: #80392C;
+  height: 60px;
+}
+.bar_bottom_o{
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #FFFFFF;
+  background-color: #548880;
+  height: 60px;
+}
+
+.prompt_categoria {  
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #4F4D59;  
+  font-size: 16px;
+  text-align: center;  
+}
+
+.gray {
+  background-color: #E0DFD7;
+  border-radius: 10px;
+}
+
+.blanco {
+  color: white;
 }
