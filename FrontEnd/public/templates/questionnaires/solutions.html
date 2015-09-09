@@ -1,4 +1,10 @@
 <div class="backgr">
+	<div class="volver" ng-click="changeView('V')">
+      <i class="fa fa-angle-left"></i> Volver a Explorar
+    </div>
+	<div layout='row' layout-align="center center">
+    <md-progress-circular md-mode="indeterminate" ng-show="load"></md-progress-circular>
+  </div>  
 	<div class="box" ng-repeat="s in solutions">		
 		<div layout="row" layout-align="start center">
 				<div><img class="body-img" ng-src="%%img%%"></div>
@@ -9,8 +15,8 @@
 	</div>
 </div>
 <div class="solut_foot">
-	<div layout="row" layout-align="center center" class="solut-button">
-		 <img ng-src="%%img%%">
+	<div layout="row" layout-align="center center" class="solut-button" ng-click="reg()">
+		 <img ng-src="%%img2%%">
 		 <div>Registrate</div>
 	</div>
 </div>					

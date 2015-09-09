@@ -1,11 +1,4 @@
 /*Modificaciones para pantalla SIGNIN*/
-.fondo{
-  max-width: 320px;  
-  background-image: url("../images/Fondo/Fondo_Inicio.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .btn-success {
   background-color: #548880;
   border-color: #548880;
@@ -386,6 +379,7 @@ visibility: hidden; /*temporarily hide the "YES" label*/
   background-color: #F1F1F1;
   padding: 1% 2% 1% 2%;
   height: 60px;
+  box-shadow: 0 0 5px 2px rgba(1, 1, 1, 0.6);
 }
 .solut-button{
   background-color: #548880;
@@ -400,17 +394,17 @@ visibility: hidden; /*temporarily hide the "YES" label*/
   padding: 60% 10px 60px 10px;
   height: 300px; 
 }
-.serv_button{
+/*.serv_button{
   vertical-align: baseline;
   height: 115px;
   padding: 0px 26px; 
-}
-.serv_text{    
+}*/
+/*.serv_text{    
   height: 27px;
   text-align: center;
   font-weight: bold;
   margin-left: 8px;
-}
+}*/
 .prompt_btn_O {
   width: 75px;
   height: 75px; 
@@ -453,7 +447,6 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 .galeria p {
   color:#58595B; 
   font-size: 9.6pt;
-  height: 22px;
 }
 
 /*Modificaciones para pantalla ROLES*/
@@ -510,4 +503,17 @@ a.roles {
 
 .blanco {
   color: white;
+}
+
+
+
+
+
+md-tabs md-ink-bar {
+    color: rgb(6,158,82);
+    background: rgb(6,158,82);
+}
+
+md-tabs .md-tab.md-active, md-tabs .md-tab.md-focused {
+    color: rgb(6,158,82);
 }
