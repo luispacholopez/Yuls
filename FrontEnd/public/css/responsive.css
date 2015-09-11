@@ -1,26 +1,3 @@
-@media all{
-	.main{
-		width: 100%;
-		height: 100%;		
-		background-color: #f2f2f2;
-	}
-	.flecha_arriba{
-	  border: transparent;
-	  width: 19px;
-	  height: 12px;
-	  background: url("../images/botones/boton-flecha-arriba.png") no-repeat;
-	}
-	.flecha_abajo{
-	  border: transparent;
-	  width: 19px;
-	  height: 12px;
-	  background: url("../images/botones/boton-flecha-arriba.png") no-repeat;
-	  -webkit-transform: rotate(180deg);
-	  -moz-transform: rotate(180deg);
-	  -ms-transform: rotate(180deg);
-	}
-}
-
 /*Dispositivos Pequeños*/
 @media (max-width: 320px) and (orientation: portrait){
 	.fondo{
@@ -33,7 +10,11 @@
 		padding-left: 25%;
 		padding-right: 25%;
 		width: 100%;
+		/*width: 116px;
+		height: 117px;
+		background: url("../images/botones/logo.png") no-repeat;*/
 	}
+
 	.botones_inicio {
 		margin-top: 114px;
 	}
@@ -47,7 +28,6 @@
 		width: 50px;
 	}
 
-	/*Action View*/
 	.barra_main{
 		height: 50px;
 		background-color: white;
@@ -55,6 +35,13 @@
 		font-weight: bolder;
 		box-shadow: 10px 10px 10px 10px rgba(1, 1, 1, 0.6);		
 	}
+
+	.botones_barra {
+		height: 40px;
+		text-align: center;		
+	}
+
+	/*Action View*/	
 
 	.prompt {
 	    padding-top: 15px;
@@ -111,8 +98,20 @@
 	  color: #FFFFFF;
   	  background-color: #548880;
 	}
+/* View Summary*/
+	.prompt_q_full {	  
+	  width: 100%;
+	  color: #4F4D59;   
+	  font-size: 16px;
+	  text-align: left;
+	}
 
-	
+	.s_quest_b {
+	    background-color: #7F382B;
+	    width: 100%;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	}
 	
 }
 
@@ -124,7 +123,7 @@
 		padding-top:10%;		
 	}
 	.img-logo {		
-		width: 100%;
+		width: 100%;		
 	}
 	.botones_inicio {
 		margin-top: 114px;
@@ -138,6 +137,11 @@
 	.menu{
 		text-align: center;
 		width: 100px;
+	}
+
+	.botones_barra {
+		height: 40px;
+		text-align: center;		
 	}
 
 	/*Action View*/
@@ -211,4 +215,36 @@
 	}
 
 		
+}
+
+@media all{
+	.main{
+		width: 100%;
+		height: 100%;		
+		background-color: #f2f2f2;
+	}
+	.flecha_arriba{
+	  border: transparent;
+	  width: 19px;
+	  height: 12px;
+	  background: url("../images/botones/boton-flecha-arriba.png") no-repeat;
+	}
+	.flecha_abajo{
+	  border: transparent;
+	  width: 19px;
+	  height: 12px;
+	  background: url("../images/botones/boton-flecha-arriba.png") no-repeat;
+	  -webkit-transform: rotate(180deg);
+	  -moz-transform: rotate(180deg);
+	  -ms-transform: rotate(180deg);
+	}
+	.toolbar_side{
+		background-color: #f2f2f2;
+		color: #154064;
+	}
+
+	.fondo_blanco{
+		background-color: #ffffff;
+		color: #000000;
+	}
 }
