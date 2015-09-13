@@ -1,10 +1,13 @@
-<div layout="row" layout-align="space-around center" class="barra_main">	 
+<div layout="row" layout-align="space-around center" class="barra_main">	
 	<div class="regresar" ng-click="changeView('V')">
 		<i class="fa fa-arrow-left"></i>
+		<md-tooltip>
+        VOLVER
+      </md-tooltip>
 	</div>
 	LABORATORIOS VIRTUALES
-	<div class="menu">		
-		<i class="fa fa-align-justify"></i>
+	<div class="menu" ng-click="toggleRight()">	
+		<i class="fa fa-reorder"></i>
 	</div>
 </div>
 
@@ -23,3 +26,16 @@
     	</div>
     </div>
 </div>	  
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+  <md-toolbar layout="row" layout-align="space-around center" class="toolbar_side">  
+    <div>Lab. Virtuales</div>
+    <div ng-click="close()" class="md-primary">
+        <i class="fa fa-close"></i>
+      </div>
+  </md-toolbar>
+  <div layout="column" layout-align="space_around center">
+    <div class="botones_barra" ng-click="menu_bar('signin')">Inicio</div>
+    <div class="botones_barra" ng-click="menu_bar('personalData')">Registrate</div>      
+    <div class="botones_barra" ng-click="menu_bar('signin')">Iniciar Sesión</div>            
+  </div>  
+</md-sidenav>  

@@ -1,22 +1,31 @@
-<div>
-<div class="volver" ng-click="changeView('V')">
-	<i class="fa fa-angle-left"></i> Ver Lista 
-</div>	
-<div layout="row" layout-align="space-around center">	
-	<div><img ng-src="%%img1%%"></div>	
-	<div class="bubble">95%</div>	
-	<div><img ng-src="%%img1%%"></div>	
-	</div>	
+<div layout="row" layout-align="space-around center" class="barra_main">
+  <div class="regresar" ng-click="menu_bar('solutions')">
+    <i class="fa fa-arrow-left"></i>
+    <md-tooltip>
+        VOLVER
+      </md-tooltip>
+  </div>
+  LABORATORIOS VIRTUALES
+  <div class="menu" ng-click="toggleRight()"> 
+    <i class="fa fa-reorder"></i>
+  </div>
 </div>
-<div layout="row" layout-align="space-around center">
-		<div>Usted</div>
-		<div></div>
-		<div>%%solution.titulo%%</div>	
+
+<div layout="row" layout-align="space-around center" class="sol_imagenes">
+	<div><img ng-src="%%img1%%"></div>	
+	<div layout="row" layout-align ="center center"class="bubble">95%</div>	
+	<div><img ng-src="%%img1%%"></div>	
+</div>	
+
+<div layout="row" layout-align="center center">
+		<div flex="35">Usted</div>
+		<div flex="30"></div>    
+		<div flex="35">%%solution.titulo%%</div>	
 </div>
 <!-- TABS -->
 <div>
 	<!-- <md-tabs md-dynamic-height md-border-bottom> -->
-<md-tabs md-swipe>
+<md-tabs>
       <md-tab label="Coincidencia">
         <md-content class="md-padding">
         	<div layout="column" layout-align="center center" ng-repeat="questionnaire in questionnaires">
@@ -33,12 +42,13 @@
         </md-content>
       </md-tab>
       <md-tab label="Información">
-        <md-content class="md-padding">          
-          <p>%%solution.descripcion%%</p>
+        <md-content >        
+        <div class=""><p>%%solution.descripcion%%</p></div>    
+          
         </md-content>
       </md-tab>
-      <md-tab label="Contacto">
-        <md-content class="md-padding">          
+      <md-tab label="Contacto" ng-disabled="true">
+        <md-content class="md-padding">                
           <p>Información de Contacto</p>
         </md-content>
       </md-tab>
@@ -49,3 +59,18 @@
 		 <div>Cerrar Trato</div>
      <div>Siguiente</div>	
 </div>					
+
+
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+  <md-toolbar layout="row" layout-align="space-around center" class="toolbar_side">  
+    <div>Lab. Virtuales</div>
+    <div ng-click="close()" class="md-primary">
+        <i class="fa fa-close"></i>
+      </div>
+  </md-toolbar>
+  <div layout="column" layout-align="space_around center">
+    <div class="botones_barra" ng-click="menu_bar('signin')">Inicio</div>
+    <div class="botones_barra" ng-click="menu_bar('personalData')">Registrate</div>      
+    <div class="botones_barra" ng-click="menu_bar('signin')">Iniciar Sesión</div>            
+  </div>  
+</md-sidenav>  
