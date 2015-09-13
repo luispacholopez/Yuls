@@ -1,6 +1,6 @@
 angular.module('gemStore')
-.controller('SolutionController', ['$scope','Constantes','SolutionFactory','solutionService', '$location',
-	function($scope,Constantes,SolutionFactory,solutionService, $location){
+.controller('SolutionController', ['$scope','Constantes','SolutionFactory','solutionService', '$location', 'questionnaireService', 'navBar',
+	function($scope,Constantes,SolutionFactory,solutionService, $location, questionnaireService, navBar){
         //Rutas Imagenes
         window.scrollTo(0, 1);
         $scope.ruta = Constantes.ruta_imagenes + "botones/";                        
@@ -9,6 +9,18 @@ angular.module('gemStore')
         $scope.detail = false;
         $scope.id = null;
         $scope.load = true;
+
+        $scope.toggleRight = function(){                                
+          navBar.open();
+        }
+
+        $scope.close= function(){
+          navBar.close();
+        }
+
+        $scope.menu_bar = function (view){
+          questionnaireService.changeView(view);                      
+        }
         promesa = SolutionFactory.query().$promise.
           then(function(solutions){                
                 solutionService.setSolutions(solutions);

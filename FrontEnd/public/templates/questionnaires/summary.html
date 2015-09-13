@@ -37,7 +37,7 @@
 	</div>	 -->
 	<div ng-repeat="question in questionnaire.preguntas">
 		<div ng-show="question.enable">
-			<div class="s_quest_q"><div class="blanco">%%question.pregunta.enunciado%%</div>
+			<div class="s_quest_q"><div class="texto_verde">%%question.pregunta.enunciado%%</div>
 			<div ng-repeat="option in question.pregunta.opciones">
 				<h3 ng-show="option.dato || question.pregunta.dato==option.id" class="s_quest_r">%%option.respuesta%%</h3>
 			</div>	
