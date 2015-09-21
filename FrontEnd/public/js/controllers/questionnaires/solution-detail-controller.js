@@ -52,11 +52,10 @@ angular.module('gemStore')
                 getDetailSolution();
             }
             else{                
-                getResultsPage(2).success(
+                getResultsPage(solutionService.getPage() + 1);
                 solutionService.setIndex(0);
                 solutionService.setId($scope.solutions[solutionService.getIndex()].problema_solucion.id);
-                getDetailSolution();
-                );
+                getDetailSolution();                
                 // $scope.solutions = solutionService.getSolutions();                
                 
             };

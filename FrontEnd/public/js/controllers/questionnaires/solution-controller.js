@@ -49,7 +49,7 @@ angular.module('gemStore')
                 solutionService.setSolutions(info.problemas_soluciones);
                 $scope.solutions = solutionService.getSolutions();
                 $scope.totalsolutions = info.total;
-                console.log('Pag: ',pageNumber);
+                solutionService.setPage(pageNumber);                
             })
             .catch(function(errors){
                 console.log(errors);

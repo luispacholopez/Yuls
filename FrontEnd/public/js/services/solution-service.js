@@ -6,6 +6,7 @@
 	var solution = null; //Una sola
 	var id = null; //Una sola
 	var index = null; //Una sola
+	var page = null; //Una sola
 	var getSolutions = function ()
 	{
 		return solutions;
@@ -45,6 +46,14 @@
 		index = _index;		
 		console.log(index);
 	}
+	var getPage = function ()
+	{
+		return page;
+	}
+	var setPage = function (_page)
+	{
+		page = _page;				
+	}
 
 	 return {
 
@@ -57,7 +66,9 @@
 	 	getId: getId,
 	 	setId: setId,
 	 	getIndex: getIndex,
-	 	setIndex: setIndex	  		  		  		  	
+	 	setIndex: setIndex,
+	 	getPage: getPage,
+	 	setPage: setPage	  	  		  		  		  	
 	  };
 
 	}]);
