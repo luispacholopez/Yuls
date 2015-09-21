@@ -49,7 +49,7 @@
 	    padding-top: 15px;
 	    padding-left: 10px;
 	    padding-right: 10px;
-	    height: 430px;
+	    height: 80%;
 	    background-color: #F2F2F2;
 	}
 	.prompt_q {	  
@@ -121,6 +121,33 @@
 	  background-color: #C6D7CE;
 	  border-radius: 12px;
 	 }
+
+	 .q_button {
+	  height: 9em;
+	  padding-top: 15%;      
+	  width: 100%;
+	}
+	.q_next {
+	  width: 90px;
+	  height: 75px;	  
+	  color: #548880;
+	  text-align: center;
+	  font-weight: bold;
+	  cursor: pointer;
+	}
+	.q_img {	  	  	  
+	  text-align: center;	  	 
+	  margin-bottom: 15%; 
+	}
+	.q_back {
+	  width: 90px;
+	  height: 75px; 
+	  padding-left: 0px;
+	  color: #80392C;
+	  text-align: center;
+	  font-weight: bold;
+	  cursor: pointer;
+	}
 /* View Summary*/
 	.prompt_q_full {	  
 	  width: 100%;
@@ -258,15 +285,10 @@
 		height: 40px;		
 		text-align: center;
 	}
-
-
-
-
-
 }
 
 /*Dispositivos Grandes*/
-@media (min-width: 321px){
+@media (min-width: 321px) and (max-width: 2000px){
 	.fondo{
 		margin-left: 25%;
 		width: 50%;
@@ -309,7 +331,8 @@
 	    padding-top: 15px;
 	    padding-left: 10px;
 	    padding-right: 10px;
-	    height: 790px;
+	    height: 80%;
+	    /*overflow: auto;*/
 	    background-color: #F2F2F2;	    
 	}
 
@@ -377,11 +400,37 @@
 	  color: #000000;  
 	  font-size: 16px;  
 	  text-align: center;
-	  background-color: #548880;
+	  background-color: #C6D7CE;
 	  border-radius: 12px;
 	  user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
+  		-webkit-user-select: none;
+  		-webkit-touch-callout: none;
+	}
+	.q_button {
+	  height: 9em;
+	  padding-top: 15%;      
+	  width: 100%;
+	}
+	.q_next {
+	  width: 90px;
+	  height: 75px;	  
+	  color: #548880;
+	  text-align: center;
+	  font-weight: bold;
+	  cursor: pointer;
+	}
+	.q_img {	  	  	  
+	  text-align: center;	  	 
+	  margin-bottom: 15%; 
+	}
+	.q_back {
+	  width: 90px;
+	  height: 75px; 
+	  padding-left: 0px;
+	  color: #80392C;
+	  text-align: center;
+	  font-weight: bold;
+	  cursor: pointer;
 	}
 	/* View Summary*/
 	.prompt_q_full {	  
@@ -562,6 +611,24 @@
 
 /* Fin Modificaciones al MATERIAL ANGULAR*/
 
+.prompt_r {
+ padding: 10px;  
+ margin-top: 5px;
+ margin-bottom: 5px;
+ margin-left: 15px;
+ margin-right: 15px;
+   width: 100%;
+ color: #000000;  
+  font-size: 16px;  
+ text-align: center;
+ background-color: #C6D7CE;
+ border-radius: 12px;
+ }
+
+ .bc_content{
+ 	height: 180px;
+ }
+
 .rad,
 .ckb{
   cursor: pointer;
@@ -570,14 +637,14 @@
   -webkit-touch-callout: none;
   width:100%;
 }
-.rad > div > div > input,
-.ckb > div > div > input{ /* HIDE ORG RADIO & CHECKBOX */
+.rad > input,
+.ckb > input{ /* HIDE ORG RADIO & CHECKBOX */
   visibility: hidden;
   position: absolute;
 }
 /* RADIO & CHECKBOX STYLES */
-.rad > div > div > i,
-.ckb > div > div > i{     /* DEFAULT <i> STYLE */
+.rad > i,
+.ckb > i{     /* DEFAULT <i> STYLE */
   display: inline-block;
   vertical-align: middle;
   width:  23px;
@@ -589,26 +656,27 @@
   background: gray;
 }
 /* CHECKBOX OVERWRITE STYLES */
-
-.rad:hover > i{ /* HOVER <i> STYLE */
+/* HOVER <i> STYLE */
+/*.rad:hover > i{ 
   box-shadow: inset 0 0 0 3px #fff;
   background: gray;
 }
-.rad > div > div > input:checked + i{ /* (RADIO CHECKED) <i> STYLE */
+*/
+.rad > input:checked ~ i{ /* (RADIO CHECKED) <i> STYLE */
   box-shadow: inset 0 0 0 3px #fff;
   background: #548880;
 }
 /* CHECKBOX */
-.ckb > div > div > input + i:after{
-  
+.ckb > input + i:after{
   margin-top: -4px;
 }
-.ckb > div > div > input:checked + i:after{ /* (RADIO CHECKED) <i> STYLE */
+.ckb > input:checked + i:after{ /* (RADIO CHECKED) <i> STYLE */
   content: "✓";
   font-weight: bold;
   color:  #548880;
   margin-right: 25%;
 }
+
 .b_label{
 	display: inline;
 }	
