@@ -1,0 +1,22 @@
+<div class="fondo">   
+  <form  class="form-signin" id="id_auth_form" ng-submit="login()">
+    <image class="img-logo" ng-src="%%logo%%"></image>
+    <div class="botones_inicio">              
+      <div>
+        <md-input-container flex>
+          <label>Ingrese Usuario</label>
+          <input ng-model="username" required name="username" type="text">
+        </md-input-container>        
+      </div>    
+      <div>
+        <md-input-container flex>
+          <label>Contraseña</label>
+          <input ng-model="password" required name="password" type="password">
+        </md-input-container>                
+      </div>
+      <div>
+        <input type="submit" value="Ingresar">       
+      </div>
+    </div>
+  </form>  
+</div>

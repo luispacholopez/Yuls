@@ -59,23 +59,7 @@ angular.module('gemStore')
                 $scope.load = false;
             });          
         }
-        //   promesa = SolutionFactory.query().$promise.
-        //   then(function(solutions){                
-        //         solutionService.setSolutions(solutions);
-        //         $scope.solutions=solutionService.getSolutions();                
-        // })
-        // .catch(function(errors){
-        //   console.log(errors);
-        // })
-        // .finally(function(){
-        //   console.log("in finally");
-        //   $scope.load = false;
-        // });
-            // $http.get('path/to/api/users?page=' + pageNumber)
-            //     .then(function(result) {
-            //         $scope.users = result.data.Items;
-            //         $scope.totalUsers = result.data.Count
-            //     });
+        
         
         $scope.detalle = function(_id,_index){                      
             // $scope.solution = $scope.solutions[parseInt(_id)];

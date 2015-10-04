@@ -21,10 +21,7 @@
   border-color: #90392C;
   text-align: left;
 }
-.main{
-  background-color: #F2F2F2;
-  font-family: 'Roboto', sans-serif;
-}
+
 /*Modificaciones para pantalla Action*/
 .prompt {  
   padding-top: 15px;
