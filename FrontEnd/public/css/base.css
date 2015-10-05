@@ -48,7 +48,7 @@ a.roles:nth-child(even)  {border-left: 0px !important; border-right: 0px !import
 .galeria div { background: #C3DBCC; border: 2px solid #E0DFD7; border-radius: 50%; margin: 16px auto; height: 112px; width: 112px; }
 .galeria div:hover { background: #E0DFD7; }
 .galeria div img { max-width: 100%;}
-.galeria p {color:#58595B; font-size: 12pt;}
+.galeria p {color:#58595B; font-size: 10pt;}
 
 /*footer*/
 div.MobileFooter { background: #E0DFD7; height: 100%; width:100%; position: absolute; top:318px;}
