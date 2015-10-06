@@ -24,6 +24,14 @@
 	}
 
 
+	div.descriptionWrapper h2, div.descriptionWindow h3,
+	div.descriptionWindow p, div.cancelar span, div.aceptar span
+	{ 
+		font-size: medium;
+	}
+
+
+
 
 }
 
@@ -53,6 +61,12 @@
 	 .action_text, .galeria p, .footer_fix{
 	 	font-size: x-large;
 	 }
+
+	div.descriptionWrapper h2, div.descriptionWindow h3,
+	div.descriptionWindow p, div.cancelar span, 
+	div.aceptar span{
+	 	font-size: x-large;
+	}
 
  	/*rol page*/
 	 .galeria{
@@ -84,12 +98,15 @@
 
 	/*action questionnaire page*/
 	 .barra_main, .botones_barra, .prompt_q, .toolbar_side, 
-	 .action_text, .galeria p, .footer_fix{
+	 .action_text, .galeria p, .footer_fix, 
+	 .div.descriptionWrapper h2, div.descriptionWindow h3,
+	 div.descriptionWindow p, div.cancelar span, 
+	 div.aceptar span{
 	 	font-size: xx-large;
 	 }
 
 
-	 /*rol page*/
+	 /*rol page*/	
 	 .galeria{
 	 	margin-top: 8%;
 	 }
@@ -150,7 +167,7 @@
 	md-sidenav{
 		min-width: 0px;
 		max-width: 100%;
-		width: 50%
+		width: 50%;
 	}
 	md-toolbar{
 		font-size: inherit;
@@ -188,7 +205,6 @@
 		height: 20%;
 		padding: 5% 2% 0px 2%;
 	}
-
 	a.roles {
 	  border: none;
 	  width: 45%;
@@ -240,7 +256,6 @@
 	md-tabs .md-tab.md-active, md-tabs .md-tab.md-focused {
 	    color: rgb(6,158,82);
 	}
-
 	.footer_fix {
 	  position: fixed;
 	  bottom: 0;
@@ -262,5 +277,118 @@
 	.galeria p {
 	  color:#58595B; 
 	}
+
+
+	/*rol-overlay page*/
+
+	div.overlay { 
+		background: rgba(88,89,91,0.85); 
+		height: 100%; 
+		width:100%; 
+		position: absolute; 
+		top:0; 
+		text-align: center;
+	}
+	a.close {
+		background: #58595B; 
+		height: 24px; 
+		border-radius: 12px; 
+		color: #E0DFD7; 
+		display: block; 
+		width: 24px; 
+		-webkit-border-radius: 12px; 
+		-moz-border-radius: 12px;
+		cursor: pointer;
+		text-align: center; 
+		float: right; 
+		margin: 12px 12px 0 0;
+	}
+	a.close span {
+		font-size: 18px;
+		margin: 0; 
+		display: block; 
+		font-weight: 700; 
+	}
+	div.descriptionWrapper { 
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px; 
+		background: #E0DFD7; 
+		border-radius: 5px; 
+		display: block; 
+		margin: 20px auto; 
+		width: 90%;
+		height: 80%;
+	}
+	div.descriptionWrapper h2 { 
+		color: #59585B; 
+		display: inline-block; 
+		float: left; 
+		margin: 12px 0 12px 12px; 
+		text-align: left; 
+		text-transform: uppercase; 
+		width: 75%; 
+	}
+	div.descriptionWindow { 
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px; 
+		background: white; 
+		border-radius: 5px; 
+		clear: both; 
+		display: block; 
+		margin: 20px auto; 
+		width: 95%; 
+		padding: 12px 0 0 0; 
+		height: 70%;
+	}
+	div.descriptionWindow div {
+		background: white; 
+		border: 2px solid #E0DFD7; 
+		border-radius: 50%; 
+		margin: 5% auto; 
+		height: 112px; 
+		width: 112px;
+	}
+	div.descriptionWindow div img { 
+		max-width: 100%;
+	}
+	div.descriptionWindow h3 { 
+		color: #e2202e;
+	}
+	div.descriptionWindow p {
+		color:#58595B; 
+	}
+	.descrip_img{
+		padding: 5% 5% 5% 5%;
+	}
+	div.descriptionWrapper .botones {
+		display: inline-block; 
+		width: 95%; 
+		max-height: 50px; 
+		margin: 0 0 5% 0;
+	}
+	div.descriptionWrapper div.cancelar {
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px; 
+		border-radius: 5px; 
+		width: 25%;  
+		background: #e2202e; 
+		float: left; 
+		cursor: pointer; 
+	}
+	div.descriptionWrapper div.aceptar {
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px; 
+		border-radius: 5px; 
+		width: 25%; 
+		background: #37b34a; 
+		float: right; 
+		cursor: pointer;
+	}
+	div.cancelar span, div.aceptar span {
+		margin: 4px 0 0 0; 
+		display: block;  
+		color: white;
+	}
+
 
 }
