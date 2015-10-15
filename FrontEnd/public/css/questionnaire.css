@@ -45,6 +45,8 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 
 }
 
+
+
 /*Select Option*/
 .styled-select {
   margin-bottom: 5px;
@@ -143,7 +145,7 @@ visibility: hidden; /*temporarily hide the "YES" label*/
 @keyframes slideInUp {
     from    { transform:translateY(100%); }
     to      { transform: translateY(0); }
-
+}
 
 
 /* page specific animations ------------------------ */
