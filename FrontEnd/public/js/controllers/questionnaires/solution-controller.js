@@ -1,6 +1,6 @@
 angular.module('gemStore')
-.controller('SolutionController', ['$scope','Constantes','SolutionFactory','solutionService', '$location', 'QuestionnaireFactory','questionnaireService', 'navBar',
-	function($scope,Constantes,SolutionFactory,solutionService, $location, QuestionnaireFactory, questionnaireService, navBar){
+.controller('SolutionController', ['$scope','Constantes','SolutionFactory','solutionService', '$location', 'QuestionnaireFactory','questionnaireService', 'navBar','autenticacionService','$mdDialog','GuardarBusquedaFactory',
+	function($scope,Constantes,SolutionFactory,solutionService, $location, QuestionnaireFactory, questionnaireService, navBar, autenticacionService, $mdDialog, GuardarBusquedaFactory){
         //Rutas Imagenes        
         $scope.ruta = Constantes.ruta_imagenes + "botones/";                        
         $scope.img = $scope.ruta + 'boton-empresario.png';
@@ -42,9 +42,9 @@ angular.module('gemStore')
             var qf = new QuestionnaireFactory();
             qf.cuestionarios = questionnaireService.getQuestionnaires();                                        
             qf.tipo = questionnaireService.getTipo();
-
+            console.log('Info',qf);
             $scope.load = true;
-            SolutionFactory.get({cuestionario:qf,pagina:pageNumber}).$promise.
+            SolutionFactory.save ({cuestionario:qf,pagina:pageNumber}).$promise.
             then(function(info){                                
                 solutionService.setSolutions(info.problemas_soluciones);
                 $scope.solutions = solutionService.getSolutions();
@@ -59,23 +59,7 @@ angular.module('gemStore')
                 $scope.load = false;
             });          
         }
-        //   promesa = SolutionFactory.query().$promise.
-        //   then(function(solutions){                
-        //         solutionService.setSolutions(solutions);
-        //         $scope.solutions=solutionService.getSolutions();                
-        // })
-        // .catch(function(errors){
-        //   console.log(errors);
-        // })
-        // .finally(function(){
-        //   console.log("in finally");
-        //   $scope.load = false;
-        // });
-            // $http.get('path/to/api/users?page=' + pageNumber)
-            //     .then(function(result) {
-            //         $scope.users = result.data.Items;
-            //         $scope.totalUsers = result.data.Count
-            //     });
+        
         
         $scope.detalle = function(_id,_index){                      
             // $scope.solution = $scope.solutions[parseInt(_id)];
@@ -89,5 +73,60 @@ angular.module('gemStore')
             $location.path('personalData');                               
         }
 
+        $scope.loggin = function(){
+            if (autenticacionService.getInfo()) {                
+                return false;
+            } else{                
+                return true;
+            };            
+        }
+
+        $scope.addB = function(){
+            $mdDialog.show({
+                  controller: DialogController,
+                  templateUrl: 'templates/questionnaires/popup-tmp.html',
+                  parent: angular.element(document.body),
+                  targetEvent: '$event',
+                  clickOutsideToClose:true
+                })
+                .then(function(answer) {                  
+                  console.log(answer.titulo);
+                  console.log(answer.descripcion);
+                  console.log(questionnaireService.getQuestionnaires());                  
+                  console.log(questionnaireService.getTipo());                                   
+                  console.log(autenticacionService.getUser());                                   
+                  $NuevaBusqueda = new GuardarBusquedaFactory();
+                  $NuevaBusqueda.titulo = answer.titulo;
+                  $NuevaBusqueda.descripcion = answer.descripcion;
+                  $NuevaBusqueda.cuestionario = questionnaireService.getQuestionnaires();
+                  $NuevaBusqueda.tipo = questionnaireService.getTipo();
+                  $NuevaBusqueda.usuario = autenticacionService.getUser().id;
+                  $NuevaBusqueda.categorias = [];
+                  $NuevaBusqueda.tags = [];
+                  $NuevaBusqueda.$save({'pk': autenticacionService.getUser().id}).then(function(datos){                    
+                    console.log(datos);                    
+                  }).catch(function(error){
+                    console.log(error);                    
+                  });
+                }, function() {                                    
+                    
+                });            
+        }
         
 }]);
+function DialogController($scope, $mdDialog) {
+    $scope.save = false;
+    // console.log($scope.info.titulo);
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function(answer,answer2) {    
+    var a = {};
+    a.titulo=answer;
+    a.descripcion=answer2;    
+    $mdDialog.hide(a);
+  };
+}

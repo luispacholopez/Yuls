@@ -18,14 +18,17 @@
 </div>	
 
 <div layout="row" layout-align="center center">
-		<div flex="35">Usted</div>
+		<div flex="35" class="solution_text">Usted</div>
 		<div flex="30"></div>    
-		<div flex="35">%%solution.problema_solucion.titulo%%</div>	
+		<div flex="35" class="solution_text">%%solution.problema_solucion.titulo%%</div>	
 </div>
+<div layout='row' layout-align="center center">
+      <md-progress-circular md-mode="indeterminate" ng-show="load"></md-progress-circular>
+    </div>  
 <!-- TABS -->
-<div>
-	<!-- <md-tabs md-dynamic-height md-border-bottom> -->
-<md-tabs>
+<div ng-hide="load">
+	<!-- <md-tabs md-dynamic-height md-border-bottom> -->  
+<md-tabs md-stretch-tabs="always">
       <md-tab label="Coincidencia">
         <md-content>
         	<div ng-repeat="detalle in detail">
@@ -36,9 +39,9 @@
         		
             <div layout="row" layout-align="center center" ng-repeat="parejas in detalle.respuestas">
               <!-- Respuestas -->                
-              <p class="sol_respuesta">%%parejas.respuesta1%%</p>
-              <div layout="row" layout-align ="center center" class="bubble">%%parejas.afinidad%% %</div>              
-              <p class="sol_respuesta">%%parejas.respuesta2%%</p>
+              <p class="sol_respuesta %%parejas.clase_color%%">%%parejas.respuesta1%%</p>
+              <div layout="row" layout-align ="center center" class="bubble %%parejas.clase_color%%">%%parejas.afinidad%% %</div>              
+              <p class="sol_respuesta %%parejas.clase_color%%">%%parejas.respuesta2%%</p>
             </div>          		
             <md-divider ng-if="!$last"></md-divider>
         	</div>          
@@ -58,9 +61,12 @@
 </md-tabs md-swipe>
 </div>
 <div class="solut_foot" layout="row" layout-align="space-around center">	
-    <div ng-click="anterior()">Anterior</div>		 
-		 <div>Cerrar Trato</div>
-     <div ng-click="siguiente()">Siguiente</div>	
+    <div ng-click="anterior()" class="solut_back"><img ng-src="%%img_anterior%%">Anterior</div>		 
+
+		 <img ng-click="menu_bar('personalData')" class="solut_img" ng-src="%%img_cerrar%%">
+     
+     <div ng-click="siguiente()" class="solut_next">
+      Siguiente<img ng-src="%%img_siguiente%%"></div>	
 </div>					
 
 

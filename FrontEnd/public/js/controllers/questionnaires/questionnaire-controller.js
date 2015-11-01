@@ -38,8 +38,7 @@ angular.module('gemStore')
               questionnaires[k].preguntas[i].pregunta.dato=0;
               for(var j=0;j<questionnaires[k].preguntas[i].pregunta.opciones.length;j++)
               {
-                questionnaires[k].preguntas[i].pregunta.opciones[j].dato=false;
-                
+                questionnaires[k].preguntas[i].pregunta.opciones[j].dato=false;                
               }
               
             } 
@@ -80,17 +79,15 @@ angular.module('gemStore')
 
     $scope.b_buscar = function(){
       console.log(questionnaireService.getConta());
-        if (questionnaireService.getConta() >= 0) {
+        if (questionnaireService.getConta() >= 1) {
           return true;
         } else {
           return false;
         };
     }
 
-    $scope.buscar = function(){
-      // var qf = new QuestionnaireFactory();
-      //     qf.cuestionarios = questionnaireService.getQuestionnaires();                              
-      //     qf.tipo = questionnaireService.getTipo();  
+    $scope.buscar = function(){      
+
       //     SolutionFactory.get({cuestionario:qf,pagina:1});
           // SolutionFactory.post(qf,1);
           // SolutionFactory.get(qf,1);
@@ -102,7 +99,7 @@ angular.module('gemStore')
        $location.path('solutions');
     }
 
-     $scope.summary = function(){
+     $scope.summary = function(){      
       $location.path('questionnaires/summary');
      }
 
