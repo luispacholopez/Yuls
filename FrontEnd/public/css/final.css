@@ -5,7 +5,7 @@
 	.fondo{
 		width: 100%;
 		height: 100%;
-		background-image: url("../images/Fondo/Fondo_Inicio.png");
+		background-image: url("../images/Fondo/Fondo_Inicio2.png");
 	    background-repeat: no-repeat;
 	    background-position: center;			
 	}
@@ -16,6 +16,48 @@
 	}
 	.form-signin {
     	max-width: 90%;
+	}
+	.botones_inicio {
+		margin-top: 40%;
+	}
+
+	/*rol page*/
+	.galeria{
+	 	margin-top: 10%;
+	}
+
+
+	div.descriptionWrapper h2, div.descriptionWindow h3,
+	div.descriptionWindow p, div.cancelar span, div.aceptar span
+	{ 
+		font-size: medium;
+	}
+
+
+
+
+}
+
+@media (max-width: 480px) and (orientation: landscape){
+	
+	/*signin page*/
+	.fondo{
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/Fondo/Fondo_Inicio2.png");
+	    background-repeat: no-repeat;
+	    background-position: center;			
+	}
+	.img-logo {		
+		padding-left: 35%;
+		padding-right: 35%;
+		width: 100%
+	}
+	.form-signin {
+    	max-width: 70%;
+	}
+	.botones_inicio {
+		margin-top: 5%;
 	}
 	
 	/*rol page*/
@@ -35,8 +77,9 @@
 
 }
 
+
 /*Dispositivos Medios*/
-@media (min-width: 481px) and (max-width: 800px){
+@media (min-width: 481px) and (max-width: 800px) and (orientation: portrait){
 
 	/*signin page*/
 	.fondo{
@@ -53,6 +96,9 @@
 	}
 	.form-signin {
     	max-width: 60%;
+	}
+	.botones_inicio {
+		margin-top: 40%;
 	}
 
 
@@ -79,9 +125,56 @@
 
 	
 }
+
+@media (min-width: 481px) and (max-width: 800px) and (orientation: landscape){
+
+	/*signin page*/
+	.fondo{
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/Fondo/Fondo_media.png");
+	    background-repeat: no-repeat;
+	    background-position: center;			
+	}
+	.img-logo {		
+		padding-left: 35%;
+		padding-right: 35%;
+		width: 100%
+	}
+	.form-signin {
+    	max-width: 60%;
+	}
+	.botones_inicio {
+		margin-top: 5%;
+	}
+
+	/*action questionnaire page*/
+	 .barra_main, .botones_barra, .prompt_q, .toolbar_side,
+	 .action_text, .galeria p, .footer_fix{
+	 	font-size: x-large;
+	 }
+
+	 .circle p{
+	 	    font-size: small;
+	 }
+
+	div.descriptionWrapper h2, div.descriptionWindow h3,
+	div.descriptionWindow p, div.cancelar span, 
+	div.aceptar span{
+	 	font-size: x-large;
+	}
+
+ 	/*rol page*/
+	 .galeria{
+	 	margin-top: 25%;
+	 }
+
+	
+}
+
 	
 /*Dispositivos Grandes*/
-@media (min-width: 801px){
+@media (min-width: 801px) and (orientation: portrait){
 
 	/*signin page*/
 	.fondo{
@@ -98,6 +191,9 @@
 	}
 	.form-signin {
     	max-width: 40%;
+	}
+	.botones_inicio {
+		margin-top: 40%;
 	}
 
 	/*action questionnaire page*/
@@ -138,10 +234,32 @@
 	    background-color: #F2F2F2;	    
 	}
 
-	/*signin page*/
-	.botones_inicio {
-		margin-top: 40%;
+
+	/*Modificaciones para pantalla SIGNIN*/
+
+	.btn-success {
+	  background-color: #548880;
+	  border-color: #548880;
+	  text-align: left;
 	}
+	.btn-success:hover, .btn-success:active{
+	  background-color: #549080;
+	  border-color: #549080;
+	  text-align: left;
+	}
+
+	.btn-danger {
+	  background-color: #80392C;
+	  border-color: #80392C;
+	  text-align: left;
+	}
+
+	.btn-danger:hover, .btn-danger:active {
+	  background-color: #90392C;
+	  border-color: #90392C;
+	  text-align: left;
+	}
+	
 
 	/*action page*/
 	.barra_main{

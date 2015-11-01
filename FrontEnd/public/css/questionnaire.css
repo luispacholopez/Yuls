@@ -1,26 +1,4 @@
-/*Modificaciones para pantalla SIGNIN*/
-.btn-success {
-  background-color: #548880;
-  border-color: #548880;
-  text-align: left;
-}
-.btn-success:hover, .btn-success:active{
-  background-color: #549080;
-  border-color: #549080;
-  text-align: left;
-}
 
-.btn-danger {
-  background-color: #80392C;
-  border-color: #80392C;
-  text-align: left;
-}
-
-.btn-danger:hover, .btn-danger:active {
-  background-color: #90392C;
-  border-color: #90392C;
-  text-align: left;
-}
 
 /*Modificaciones para pantalla Action*/
 
