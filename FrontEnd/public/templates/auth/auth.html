@@ -1,22 +1,24 @@
-<div class="fondo">   
-  <form  class="form-signin" id="id_auth_form" ng-submit="login()">
-    <image class="img-logo" ng-src="%%logo%%"></image>
-    <div class="botones_inicio">              
-      <div>
-        <md-input-container flex>
-          <label>Ingrese Usuario</label>
-          <input ng-model="username" required name="username" type="text">
-        </md-input-container>        
-      </div>    
-      <div>
-        <md-input-container flex>
-          <label>Contraseña</label>
-          <input ng-model="password" required name="password" type="password">
-        </md-input-container>                
-      </div>
-      <div>
-        <input type="submit" value="Ingresar">       
-      </div>
-    </div>
-  </form>  
-</div>
+<form  novalidate name="form">
+  <div class="personalData"> 
+    <md-input-container>
+          <div ng-messages="form.usuario.$error">
+            <div ng-message="required">Por favor digite su usuario</div>
+            <div ng-message="pattern">El usuario debe tener el formato de un correo (ejemplo@correo.com)</div>
+          </div> 
+          <label>Usuario(correo)</label>
+          <input type="email" ng-model="login.usuario" name="usuario" ng-pattern="/^.+@.+\..+$/" required>      
+    </md-input-container>
+    <md-input-container>
+        <div ng-messages="form.contrasena.$error">
+          <div ng-message="required">Por favor digite su contraseña</div>
+        </div> 
+        <label>Contraseña</label>
+        <input type="password" ng-model="login.contrasena" name="contrasena" required>      
+    </md-input-container>
+    <md-input-container>
+      <md-button md-no-ink class="md-primary" ng-click="forgot()">¿Ha olvidado su contraseña?</md-button>
+      <md-button class="md-raised md-primary" ng-click="login()">Login</md-button>
+    </md-input-container>  
+    <div id="alertPop" ng-cloak></div>
+  </div>
+</form>
