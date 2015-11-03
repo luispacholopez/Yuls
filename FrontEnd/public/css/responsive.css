@@ -213,6 +213,7 @@
 		text-align: center;		
 	}
 
+
 	/*View Question*/
 
 	.prompt_r {	  
@@ -257,6 +258,7 @@
 	  font-weight: bold;
 	  cursor: pointer;
 	}
+	
 	/* View Summary*/
 
 	.s_quest_b {

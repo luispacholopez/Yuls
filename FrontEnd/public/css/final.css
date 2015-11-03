@@ -1,5 +1,10 @@
 @media all{
 
+
+	md-radio-button {
+		margin: 10px;
+	}
+
 	/*diferent pages*/
 	.main{
 		width: 100%;
@@ -302,7 +307,6 @@
 }
 
 
-
 /*Dispositivos Pequeños*/
 @media (max-width: 480px) and (orientation: portrait){
 	
@@ -372,6 +376,13 @@
 	.botones_inicio {
 		margin-top: 5%;
 	}
+
+
+	/*actionquestionnarie page*/
+	.serv_body{
+	  margin-top: 20%; 
+	}
+
 	
 	/*rol page*/
 	.galeria{
@@ -399,7 +410,7 @@
 
 	/*questionnarie page*/
 	.prompt {
-	    height: 10	0%;	        
+	    height: initial;	        
 	}
 
 
@@ -496,7 +507,10 @@
 	/*actionquestionnaire page*/
 	.serv_body{
 	  height: 70%; 
+	  margin-top: 20%; 
 	}
+
+	  
 
  	/*rol page*/
 	 .galeria{
@@ -514,6 +528,11 @@
 	div.descriptionWindow {  
 		margin: 20px auto; 
 		height: 65%;
+	}
+
+	/*questionnarie page*/
+	.prompt {
+	    height: initial;	        
 	}
 
 	
@@ -554,6 +573,10 @@
 	 .circle p{
 	 	    font-size: small;
 	 }
+	.serv_body{
+	  margin-top: 20%; 
+	}
+
 
  	/*rol page*/
 	 .galeria{
@@ -567,10 +590,16 @@
 		width: 90%;
 		height: 80%;
 	}
-	div.descriptionWindow {  
+	div.descriptionWindow {
 		margin: 20px auto; 
 		padding: 1% 0 0 0; 
 		height: 70%;
+	}
+
+
+	/*questionnarie page*/
+	.prompt {
+	    height: initial;	        
 	}
 
 }
