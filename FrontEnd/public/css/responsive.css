@@ -581,11 +581,7 @@
 	::-webkit-scrollbar-thumb:hover {
 	    background-color: #548880;
 	}
-	.bc_content{
-	  height: 100%;
-	  overflow: visible;
-	  padding-bottom: 65px;
-	 }
+
 	.md-default-theme {
 		font-size: 16px;
 		
