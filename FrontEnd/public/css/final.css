@@ -1,5 +1,8 @@
 @media all{
 
+	.galeria{
+		margin-top: 5%;
+	}
 
 	body,button, html, input, select, textarea{
 	 	    font-family: 'Roboto Condensed', sans-serif !important;
@@ -365,6 +368,7 @@
 	/*index page*/
 	.footer_cont{
 		width: 80%;
+		padding-bottom: inherit;
 	}
 	.text_footer{
 		margin-right: 0 2em 0 2em;
@@ -412,7 +416,7 @@
 	}
 	div.descriptionWrapper h2, div.descriptionWindow h3,
 	div.descriptionWindow p, div.cancelar span, div.aceptar span,
-	md-radio-button
+	md-radio-button, .prompt
 	{ 
 		font-size: medium;
 	}
@@ -476,7 +480,7 @@
 	}
 	div.descriptionWrapper h2, div.descriptionWindow h3,
 	div.descriptionWindow p, div.cancelar span, div.aceptar span,
-	md-radio-button
+	md-radio-button, .prompt
 	{ 
 		font-size: medium;
 	}
@@ -538,7 +542,7 @@
 	/*action questionnaire page*/
 	 .barra_main, .botones_barra, .prompt_q, .toolbar_side,
 	 .action_text, .galeria p, .footer_fix,
-	 md-radio-button{
+	 md-radio-button, .prompt{
 	 	font-size: x-large;
 	 }
 
@@ -595,7 +599,8 @@
 
 	/*action questionnaire page*/
 	 .barra_main, .botones_barra, .prompt_q, .toolbar_side,
-	 .action_text, .galeria p, .footer_fix, md-radio-button{
+	 .action_text, .galeria p, .footer_fix, md-radio-button,
+	 .prompt{
 	 	font-size: large;
 	 }
 
@@ -624,7 +629,7 @@
 	 	margin-top: 5%;
 	 }
 	.footer_fix {
-	  height: 13%;
+	  height: 15%;
 	}
 
 
@@ -647,9 +652,9 @@
 
 	/*Select Option*/
 	.btn-buscar {  
-	  width: 30%;
-	  height: 2em;
-	  padding: 1%;
+	  width: 20%;
+	  height: 1.5em;
+	  padding: 0.1em;
 	}
 
 	
@@ -684,7 +689,7 @@
 	 .action_text, .galeria p, .footer_fix, 
 	 .div.descriptionWrapper h2, div.descriptionWindow h3,
 	 div.descriptionWindow p, div.cancelar span, 
-	 div.aceptar span, md-radio-button{
+	 div.aceptar span, md-radio-button, .prompt{
 	 	font-size: xx-large;
 	 }
 	 .circle p{
@@ -697,10 +702,10 @@
 
  	/*rol page*/
 	.galeria{
-	 	margin-top: 10%;
+	 	margin-bottom: 8%
 	 }
 	.footer_fix {
-	  height: 13%;
+	  height: 15%;
 	}
 
 	/*rol-overlay page*/
@@ -723,7 +728,7 @@
 
 	/*Select Option*/
 	.btn-buscar {  
-	  width: 30%;
+	  width: 20%;
 	  height: 2em;
 	  padding: 1%;
 	}
