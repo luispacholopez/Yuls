@@ -5,8 +5,8 @@
     * Description
     */
     angular.module('gemStore')
-    .controller('SignupMainController',['$scope', 'registroService','ResultRetriever', 'QuestionnaireFactory','questionnaireService',
-        function($scope,registroService, ResultRetriever, QuestionnaireFactory, questionnaireService){
+    .controller('SignupMainController',['$scope', 'registroService','ResultRetriever', 'QuestionnaireFactory','questionnaireService','UserByToken','autenticacionService','$mdDialog',
+        function($scope,registroService, ResultRetriever, QuestionnaireFactory, questionnaireService,UserByToken,autenticacionService,$mdDialog){
 
             $scope.form=""; 
             $scope.showErrors=false;               
@@ -34,8 +34,6 @@
           
             $scope.validate = function(model,icon,error)
             { 
-                
-
                 if(!$scope.showErrors)
                 {    
                     if(model.$untouched)
@@ -69,8 +67,7 @@
                           if(model.$invalid)
                             {
                                 
-                                return "glyphicon glyphicon-remove form-control-feedback";   
-                                
+                                return "glyphicon glyphicon-remove form-control-feedback";                                   
                             }
                             else
                             {
@@ -106,24 +103,44 @@
                                                 if(save)
                                                 {
                                                     $scope.save(view);
-
                                                 }
                                                 else{    
                                                   registroService.changeView(view);
                                                   }
-
                                         }
                                         else
                                         {
                                             $scope.showErrors=true;
                                         }   
                                     }else{
-                                        registroService.changeView(view);
+                                        if (view === 'profileMain') {
+                                            if(questionnaireService.getTipo()){
+                                                registroService.changeView('solutions');        
+                                            }   
+                                            else{
+                                                registroService.changeView(view);    
+                                            }
+                                        } else{
+                                            registroService.changeView(view);    
+                                        };
+                                        
                                     }
-
                                 };
+            $scope.usuario      = registroService.getUsuario();            
+            if ($scope.usuario.key) {
+                data = {};
+                UserByToken.us($scope.usuario.key).query().$promise.then(function(usu){                                                           
+                  data = usu;
+                  autenticacionService.setInfo($scope.usuario.key);
+                  autenticacionService.setUser(usu);                        
+                  console.log('Id: ',data.id);                                     
+                  $scope.usuario = data;
+                }).catch(function(error){
+                  console.log(error);            
+                });       
+                console.log('USUARIO',$scope.usuario);                 
+            }
 
-            $scope.usuario      = registroService.getUsuario();
             $scope.usuarioRedes = registroService.getUsuarioRedes();
             $scope.getRedById = function(id)
                                 {
@@ -177,12 +194,23 @@
                     // });  
                     // console.log(respuesta.id_usuario);                    
                     registroService.changeView(view);
-                    console.log(user);
+                    console.log(user);                    
                 }).catch(function(errors){
                     console.log("Errores retornado por el POST de agregar usuario",errors);
-                }).finally(function(){
-                    
-                    registroService.changeView('user/'+user.id);
+                    if (errors.status === 400) {
+                      $mdDialog.show(
+                      $mdDialog.alert()
+                      .parent(angular.element(document.querySelector('#alertPop')))
+                      .clickOutsideToClose(true)
+                      .title('Error')
+                      .content('El correo indicado ya existe, por favor cambielo e intentelo nuevamente.')
+                      .ariaLabel('Alert Dialog Demo')
+                      .ok('Aceptar')
+                      .targetEvent('$event')
+                      );
+                    } else{};
+                }).finally(function(){                    
+                    // registroService.changeView('user/'+user.id);
                 });
 
                 scope = {}

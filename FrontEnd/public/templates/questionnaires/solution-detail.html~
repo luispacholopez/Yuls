@@ -40,7 +40,7 @@
             <div layout="row" layout-align="center center" ng-repeat="parejas in detalle.respuestas">
               <!-- Respuestas -->                
               <p class="sol_respuesta %%parejas.clase_color%%">%%parejas.respuesta1%%</p>
-              <div layout="row" layout-align ="center center" class="bubble %%parejas.clase_color%%">%%parejas.afinidad | number:0%% %</div>              
+              <div layout="row" layout-align ="center center" class="bubble %%parejas.clase_color%%">%%parejas.afinidad%% %</div>              
               <p class="sol_respuesta %%parejas.clase_color%%">%%parejas.respuesta2%%</p>
             </div>          		
             <md-divider ng-if="!$last"></md-divider>
@@ -60,11 +60,15 @@
       </md-tab>
 </md-tabs md-swipe>
 </div>
-<div class="solut_foot" layout="row" layout-align="space-between center">	
+<div class="solut_foot" layout="row" layout-align="space-around center">	
     <div ng-click="anterior()" class="solut_back"><img ng-src="%%img_anterior%%">Anterior</div>		 
-    <p ng-show="logged()" ng-click="guardarSolucion()">Agregar Solución</p>
-		<img ng-click="conectar()" class="solut_img" ng-src="%%img_cerrar%%">     
-    <div ng-click="siguiente()" class="solut_next">Siguiente<img ng-src="%%img_siguiente%%"></div>	
+<<<<<<< HEAD
+		 <img ng-click="reg()" class="solut_img" ng-src="%%img_cerrar%%">
+=======
+		 <img ng-click="menu_bar('personalData')" class="solut_img" ng-src="%%img_cerrar%%">
+>>>>>>> b4412b462777734ff03488d69cc2135315098a7b
+     <div ng-click="siguiente()" class="solut_next">
+      Siguiente<img ng-src="%%img_siguiente%%"></div>	
 </div>					
 
 
@@ -78,6 +82,6 @@
   <div layout="column" layout-align="space_around center">
     <div class="botones_barra" ng-click="menu_bar('signin')">Inicio</div>
     <div class="botones_barra" ng-click="menu_bar('personalData')">Registrate</div>      
-    <div class="botones_barra" ng-click="menu_bar('auth')">Iniciar Sesión</div>            
+    <div class="botones_barra" ng-click="menu_bar('signin')">Iniciar Sesión</div>            
   </div>  
 </md-sidenav>  
