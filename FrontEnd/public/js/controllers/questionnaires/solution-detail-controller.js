@@ -5,7 +5,8 @@ angular.module('gemStore')
         $scope.ruta = Constantes.ruta_imagenes + "botones/";                        
         $scope.img1 = $scope.ruta + 'icono-registro.png';              
         $scope.img_cerrar = $scope.ruta + 'boton-conectarse.png';              
-        $scope.img_anterior = $scope.ruta + 'boton-regresar.png';              
+        $scope.img_anterior = $scope.ruta + 'boton-regresar.png'; 
+        $scope.anterior = $scope.ruta+'boton-regresar.png';            
         $scope.img_siguiente = $scope.ruta + 'boton-siguiente.png';              
         $scope.load = true;
         var logg = true;
