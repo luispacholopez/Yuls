@@ -61,7 +61,7 @@ angular.module('gemStore')
                         };
 
                         if ($scope.detail[i].respuestas[j].respuesta2 === "") {
-                            $scope.detail[i].respuestas[j].respuesta2 = 'No ofrece este servicio';
+                            $scope.detail[i].respuestas[j].respuesta2 = 'No hay coincidencia';
                         } 
                     };
                 };
