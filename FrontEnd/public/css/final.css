@@ -664,6 +664,37 @@
 		z-index: auto;
 	}
 
+	/*conexiones*/
+	.conexiones_datos{
+		height: 9%;
+		background-color: #B3BEBE;
+	}
+
+	.mensaje_enviado{
+	    color: #0E0000;
+	    border: 1px solid;
+	    width: 60%;
+	    border-color: #B3BEBE;
+	    border-radius: 10px;
+	    padding: 3%;
+	    margin-left: 5%;
+	    margin-top: 3%;
+	    background-color: #B3BEBE;
+	}
+
+	.mensaje_recibido{
+		color: #0E0000;
+	    border: 1px solid;
+	    width: 60%;
+	    border-color: #9FBFB9;
+	    border-radius: 10px;
+	    padding: 3%;
+	    margin-left: 35%;
+	    margin-top: 3%;
+	    background-color: #9FBFB9;
+	}
+
+
 }
 
 
